@@ -11,7 +11,6 @@ This project focuses on the women's 10-meter platform event. It extracts the pat
 
 
 ## Part 1: Age Analysis 年龄分析
-### Part1 Analysis of Age
 
 1. 年龄相关特征分析
 总结了 3 类运动员职业生涯轨迹（长期成长型、中期突破型、早期巅峰型），并结合具体运动员案例展示了年龄、得分、动作难度的变化规律；
@@ -24,12 +23,22 @@ This project focuses on the women's 10-meter platform event. It extracts the pat
 3. 预测模型的性能评估
 得分预测（回归模型）：XGBoost 表现最佳，可解释 75% 的得分波动，平均预测误差约 26 分；
 夺牌预测（分类模型）：RandomForest 表现最佳，准确率 88.2%，区分夺牌 / 未夺牌的能力较强（AUC=0.769）。
+1. Analysis of Age-Related Characteristics
+Summarized three career trajectories among athletes (long-term growth, mid-career breakthrough, early peak), illustrating patterns in age, scores, and difficulty levels through specific athlete case studies;
+Compared the “age of first competition” between Chinese and international athletes, revealing China's “early selection strategy” (average debut age of 15.7 years, significantly lower than the ~21 years observed in other countries);
+Analyzed the relationship between age and performance: a nonlinear “decline-then-rise” trend emerged, with the optimal competition age around 25.2 years; simultaneously, the median performance score was highest in the younger age group (<18 years), demonstrating a “youth advantage.”
+2. Key Influencing Factors for Performance/Medal Acquisition
+Feature importance analyzed via models (XGBoost, LightGBM, RandomForest):
+Core features for predicting scores: Historical average score (avg_score) is the most critical factor, followed by age-related features (current age / age at first competition);
+Core features for predicting medals: Historical average score and age at first competition rank as the top two factors, while “whether the athlete is Chinese” also enters the top 5, aligning with China's early selection strategy.
+3. Performance Evaluation of Predictive Models
+Score Prediction (Regression Model): XGBoost performs best, explaining 75% of score variation with an average prediction error of approximately 26 points.
+Medal Prediction (Classification Model): RandomForest performs best with 88.2% accuracy, demonstrating strong ability to distinguish medalists from non-medalists (AUC=0.769).
 
 
 ---
 
 ## Part 2: Performance Stability Analysis 表现稳定性分析
-### Part 2 Analysis of Performance Stability
 
 1. 使用的数据
 陈芋汐从2019年到2025年参加过的所有十米女子单人跳台的国际A级赛事
@@ -56,7 +65,6 @@ Research Objectives
 ---
 
 ## Part 3: Multi-person Comparative Analysis 多人对比分析
-### Part3多人对比分析Multi-person comparative analysis
 1. 用的什么数据、时间What data and time were used?
 使用的数据是单人女子10米跳台项目的赛事记录，涵盖了不同时期的国际赛事：
 其中一部分是陈若琳在2007-2013年间的参赛数据，涉及2007、2009、2011、2013年的世锦赛，2008（北京）、2012（伦敦）年的奥运会，以及2008、2010、2012年的世界杯赛事。
@@ -73,7 +81,6 @@ Two types of competition data analysis work have been completed focusing on the 
 ---
 
 ## Part 4: Temporal Analysis of Difficulty 难度时序分析
-### Part4 难度时序分析以及难度-扣分关系探究
 Temporal Analysis of Difficulty and Exploration of the Difficulty-Deduction Relationship
 
 1. 使用的数据
